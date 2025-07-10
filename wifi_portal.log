@@ -1,0 +1,465 @@
+2025-07-10 15:37:13,015 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.92.116:5000
+2025-07-10 15:37:13,028 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 15:37:13,077 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 15:37:13,522 - WARNING -  * Debugger is active!
+2025-07-10 15:37:13,523 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 15:38:06,972 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/apps.py', reloading
+2025-07-10 15:38:06,974 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/apps.py', reloading
+2025-07-10 15:38:07,010 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/apps.py', reloading
+2025-07-10 15:38:08,033 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 15:38:08,467 - WARNING -  * Debugger is active!
+2025-07-10 15:38:08,468 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 15:50:05,804 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test_wifi_portal.py', reloading
+2025-07-10 15:50:05,840 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test_wifi_portal.py', reloading
+2025-07-10 15:50:06,423 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 15:50:07,669 - WARNING -  * Debugger is active!
+2025-07-10 15:50:07,670 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 15:50:16,762 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test_wifi_portal.py', reloading
+2025-07-10 15:50:16,764 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test_wifi_portal.py', reloading
+2025-07-10 15:50:16,801 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test_wifi_portal.py', reloading
+2025-07-10 15:50:17,627 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 15:50:18,090 - WARNING -  * Debugger is active!
+2025-07-10 15:50:18,091 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 15:54:28,091 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/apps.py', reloading
+2025-07-10 15:54:28,093 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/apps.py', reloading
+2025-07-10 15:54:28,132 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/apps.py', reloading
+2025-07-10 15:54:28,487 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 15:54:28,926 - WARNING -  * Debugger is active!
+2025-07-10 15:54:28,926 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 15:57:11,474 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test_backend.py', reloading
+2025-07-10 15:57:11,476 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test_backend.py', reloading
+2025-07-10 15:57:11,528 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test_backend.py', reloading
+2025-07-10 15:57:12,304 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 15:57:12,755 - WARNING -  * Debugger is active!
+2025-07-10 15:57:12,756 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 15:57:52,492 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test.py', reloading
+2025-07-10 15:57:52,518 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test.py', reloading
+2025-07-10 15:57:52,754 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 15:57:53,328 - WARNING -  * Debugger is active!
+2025-07-10 15:57:53,328 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 15:58:03,610 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/test.py', reloading
+2025-07-10 15:58:04,476 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 15:58:04,999 - WARNING -  * Debugger is active!
+2025-07-10 15:58:05,000 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 15:58:07,694 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests.py', reloading
+2025-07-10 15:58:07,695 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests.py', reloading
+2025-07-10 15:58:07,732 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests.py', reloading
+2025-07-10 15:58:07,876 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 15:58:08,335 - WARNING -  * Debugger is active!
+2025-07-10 15:58:08,336 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:01:26,006 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests.py', reloading
+2025-07-10 16:01:26,008 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests.py', reloading
+2025-07-10 16:01:26,037 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests.py', reloading
+2025-07-10 16:01:26,735 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:01:27,230 - WARNING -  * Debugger is active!
+2025-07-10 16:01:27,230 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:03:36,907 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/__init__.py', reloading
+2025-07-10 16:03:36,909 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/__init__.py', reloading
+2025-07-10 16:03:36,910 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/__init__.py', reloading
+2025-07-10 16:03:36,911 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/__main__.py', reloading
+2025-07-10 16:03:36,912 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/__main__.py', reloading
+2025-07-10 16:03:36,914 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/__main__.py', reloading
+2025-07-10 16:03:36,915 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/builder.py', reloading
+2025-07-10 16:03:36,916 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/builder.py', reloading
+2025-07-10 16:03:36,920 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/builder.py', reloading
+2025-07-10 16:03:36,921 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/result.py', reloading
+2025-07-10 16:03:36,923 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/result.py', reloading
+2025-07-10 16:03:36,923 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/result.py', reloading
+2025-07-10 16:03:36,924 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/runner.py', reloading
+2025-07-10 16:03:36,925 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/runner.py', reloading
+2025-07-10 16:03:36,926 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/runner.py', reloading
+2025-07-10 16:03:36,927 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/unittest.py', reloading
+2025-07-10 16:03:36,927 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/unittest.py', reloading
+2025-07-10 16:03:36,928 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/unittest.py', reloading
+2025-07-10 16:03:36,929 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/version.py', reloading
+2025-07-10 16:03:36,931 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/version.py', reloading
+2025-07-10 16:03:36,932 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/version.py', reloading
+2025-07-10 16:03:36,933 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/extra/__init__.py', reloading
+2025-07-10 16:03:36,934 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/extra/xunit_plugin.py', reloading
+2025-07-10 16:03:36,935 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/extra/djangotestrunner.py', reloading
+2025-07-10 16:03:36,936 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/extra/djangotestrunner.py', reloading
+2025-07-10 16:03:36,937 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/extra/djangotestrunner.py', reloading
+2025-07-10 16:03:36,938 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/extra/xunit_plugin.py', reloading
+2025-07-10 16:03:36,940 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/extra/xunit_plugin.py', reloading
+2025-07-10 16:03:36,941 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/xmlrunner/extra/xunit_plugin.py', reloading
+2025-07-10 16:03:37,294 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:03:37,737 - WARNING -  * Debugger is active!
+2025-07-10 16:03:37,737 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:03:39,140 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/py.py', reloading
+2025-07-10 16:03:39,160 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/py.py', reloading
+2025-07-10 16:03:39,182 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/py.py', reloading
+2025-07-10 16:03:39,193 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/py.py', reloading
+2025-07-10 16:03:39,212 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/timing.py', reloading
+2025-07-10 16:03:39,218 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/doctest.py', reloading
+2025-07-10 16:03:39,224 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/python.py', reloading
+2025-07-10 16:03:39,225 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/runner.py', reloading
+2025-07-10 16:03:39,226 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/unittest.py', reloading
+2025-07-10 16:03:39,227 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/deprecated.py', reloading
+2025-07-10 16:03:39,228 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/logging.py', reloading
+2025-07-10 16:03:39,230 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/setuponly.py', reloading
+2025-07-10 16:03:39,230 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/pytester.py', reloading
+2025-07-10 16:03:39,241 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/recwarn.py', reloading
+2025-07-10 16:03:39,242 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/helpconfig.py', reloading
+2025-07-10 16:03:39,243 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/legacypath.py', reloading
+2025-07-10 16:03:39,243 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/compat.py', reloading
+2025-07-10 16:03:39,244 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/pathlib.py', reloading
+2025-07-10 16:03:39,245 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/scope.py', reloading
+2025-07-10 16:03:39,246 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/freeze_support.py', reloading
+2025-07-10 16:03:39,247 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_argcomplete.py', reloading
+2025-07-10 16:03:39,249 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/junitxml.py', reloading
+2025-07-10 16:03:39,250 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/reports.py', reloading
+2025-07-10 16:03:39,250 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/pytester_assertions.py', reloading
+2025-07-10 16:03:39,251 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/faulthandler.py', reloading
+2025-07-10 16:03:39,252 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/terminal.py', reloading
+2025-07-10 16:03:39,253 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/python_path.py', reloading
+2025-07-10 16:03:39,253 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/capture.py', reloading
+2025-07-10 16:03:39,254 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/tmpdir.py', reloading
+2025-07-10 16:03:39,255 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/pastebin.py', reloading
+2025-07-10 16:03:39,256 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/warnings.py', reloading
+2025-07-10 16:03:39,257 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/__init__.py', reloading
+2025-07-10 16:03:39,257 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/monkeypatch.py', reloading
+2025-07-10 16:03:39,258 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/outcomes.py', reloading
+2025-07-10 16:03:39,259 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/fixtures.py', reloading
+2025-07-10 16:03:39,261 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/cacheprovider.py', reloading
+2025-07-10 16:03:39,263 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/skipping.py', reloading
+2025-07-10 16:03:39,265 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/setupplan.py', reloading
+2025-07-10 16:03:39,266 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/nodes.py', reloading
+2025-07-10 16:03:39,267 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/main.py', reloading
+2025-07-10 16:03:39,267 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_version.py', reloading
+2025-07-10 16:03:39,268 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/hookspec.py', reloading
+2025-07-10 16:03:39,269 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/threadexception.py', reloading
+2025-07-10 16:03:39,270 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/stash.py', reloading
+2025-07-10 16:03:39,270 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/stepwise.py', reloading
+2025-07-10 16:03:39,274 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/unraisableexception.py', reloading
+2025-07-10 16:03:39,276 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/nose.py', reloading
+2025-07-10 16:03:39,276 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/warning_types.py', reloading
+2025-07-10 16:03:39,277 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/python_api.py', reloading
+2025-07-10 16:03:39,278 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/debugging.py', reloading
+2025-07-10 16:03:39,279 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_code/code.py', reloading
+2025-07-10 16:03:39,280 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_code/source.py', reloading
+2025-07-10 16:03:39,281 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_code/__init__.py', reloading
+2025-07-10 16:03:39,283 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/mark/expression.py', reloading
+2025-07-10 16:03:39,284 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/mark/__init__.py', reloading
+2025-07-10 16:03:39,284 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/mark/structures.py', reloading
+2025-07-10 16:03:39,286 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py', reloading
+2025-07-10 16:03:39,286 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_io/saferepr.py', reloading
+2025-07-10 16:03:39,287 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_io/__init__.py', reloading
+2025-07-10 16:03:39,288 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_io/wcwidth.py', reloading
+2025-07-10 16:03:39,290 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/config/argparsing.py', reloading
+2025-07-10 16:03:39,291 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/config/compat.py', reloading
+2025-07-10 16:03:39,292 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/config/exceptions.py', reloading
+2025-07-10 16:03:39,293 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/config/__init__.py', reloading
+2025-07-10 16:03:39,294 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/config/findpaths.py', reloading
+2025-07-10 16:03:39,310 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_py/__init__.py', reloading
+2025-07-10 16:03:39,311 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_py/path.py', reloading
+2025-07-10 16:03:39,312 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/_py/error.py', reloading
+2025-07-10 16:03:39,313 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/assertion/truncate.py', reloading
+2025-07-10 16:03:39,315 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/assertion/rewrite.py', reloading
+2025-07-10 16:03:39,315 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/assertion/__init__.py', reloading
+2025-07-10 16:03:39,316 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/_pytest/assertion/util.py', reloading
+2025-07-10 16:03:39,320 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest/__main__.py', reloading
+2025-07-10 16:03:39,321 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest/__init__.py', reloading
+2025-07-10 16:03:39,326 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/__init__.py', reloading
+2025-07-10 16:03:39,327 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/__init__.py', reloading
+2025-07-10 16:03:39,327 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/__init__.py', reloading
+2025-07-10 16:03:39,329 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/adapter.py', reloading
+2025-07-10 16:03:39,331 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/adapter.py', reloading
+2025-07-10 16:03:39,331 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/adapter.py', reloading
+2025-07-10 16:03:39,333 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/compat.py', reloading
+2025-07-10 16:03:39,335 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/compat.py', reloading
+2025-07-10 16:03:39,335 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/compat.py', reloading
+2025-07-10 16:03:39,336 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/exceptions.py', reloading
+2025-07-10 16:03:39,338 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/exceptions.py', reloading
+2025-07-10 16:03:39,338 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/exceptions.py', reloading
+2025-07-10 16:03:39,340 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/mocker.py', reloading
+2025-07-10 16:03:39,342 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/mocker.py', reloading
+2025-07-10 16:03:39,342 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/mocker.py', reloading
+2025-07-10 16:03:39,345 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/request.py', reloading
+2025-07-10 16:03:39,347 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/request.py', reloading
+2025-07-10 16:03:39,347 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/request.py', reloading
+2025-07-10 16:03:39,350 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/response.py', reloading
+2025-07-10 16:03:39,351 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/response.py', reloading
+2025-07-10 16:03:39,352 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/response.py', reloading
+2025-07-10 16:03:39,354 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/contrib/__init__.py', reloading
+2025-07-10 16:03:39,356 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/contrib/__init__.py', reloading
+2025-07-10 16:03:39,357 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/contrib/_pytest_plugin.py', reloading
+2025-07-10 16:03:39,358 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/contrib/_pytest_plugin.py', reloading
+2025-07-10 16:03:39,359 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/contrib/_pytest_plugin.py', reloading
+2025-07-10 16:03:39,361 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/contrib/fixture.py', reloading
+2025-07-10 16:03:39,363 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/contrib/fixture.py', reloading
+2025-07-10 16:03:39,364 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/requests_mock/contrib/fixture.py', reloading
+2025-07-10 16:03:39,397 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/__init__.py', reloading
+2025-07-10 16:03:39,397 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/__init__.py', reloading
+2025-07-10 16:03:39,398 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/__init__.py', reloading
+2025-07-10 16:03:39,399 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/_util.py', reloading
+2025-07-10 16:03:39,400 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/_util.py', reloading
+2025-07-10 16:03:39,400 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/_util.py', reloading
+2025-07-10 16:03:39,401 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/_version.py', reloading
+2025-07-10 16:03:39,402 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/_version.py', reloading
+2025-07-10 16:03:39,403 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/_version.py', reloading
+2025-07-10 16:03:39,403 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/plugin.py', reloading
+2025-07-10 16:03:39,404 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/plugin.py', reloading
+2025-07-10 16:03:39,404 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_mock/plugin.py', reloading
+2025-07-10 16:03:39,423 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/__init__.py', reloading
+2025-07-10 16:03:39,424 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/__init__.py', reloading
+2025-07-10 16:03:39,425 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/__init__.py', reloading
+2025-07-10 16:03:39,426 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/compat.py', reloading
+2025-07-10 16:03:39,427 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/compat.py', reloading
+2025-07-10 16:03:39,428 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/compat.py', reloading
+2025-07-10 16:03:39,429 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/embed.py', reloading
+2025-07-10 16:03:39,430 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/embed.py', reloading
+2025-07-10 16:03:39,431 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/embed.py', reloading
+2025-07-10 16:03:39,432 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/engine.py', reloading
+2025-07-10 16:03:39,433 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/engine.py', reloading
+2025-07-10 16:03:39,434 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/engine.py', reloading
+2025-07-10 16:03:39,435 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/plugin.py', reloading
+2025-07-10 16:03:39,436 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/plugin.py', reloading
+2025-07-10 16:03:39,437 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/pytest_cov/plugin.py', reloading
+2025-07-10 16:03:39,456 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/flask_testing/__init__.py', reloading
+2025-07-10 16:03:39,457 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/flask_testing/__init__.py', reloading
+2025-07-10 16:03:39,458 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/flask_testing/__init__.py', reloading
+2025-07-10 16:03:39,458 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/flask_testing/twill.py', reloading
+2025-07-10 16:03:39,459 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/flask_testing/twill.py', reloading
+2025-07-10 16:03:39,460 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/flask_testing/twill.py', reloading
+2025-07-10 16:03:39,461 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/flask_testing/utils.py', reloading
+2025-07-10 16:03:39,462 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/flask_testing/utils.py', reloading
+2025-07-10 16:03:39,463 - INFO -  * Detected change in '/home/lidruf/anaconda3/lib/python3.13/site-packages/flask_testing/utils.py', reloading
+2025-07-10 16:03:39,693 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:03:40,129 - WARNING -  * Debugger is active!
+2025-07-10 16:03:40,129 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:05:28,788 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests.py', reloading
+2025-07-10 16:05:29,072 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:05:29,524 - WARNING -  * Debugger is active!
+2025-07-10 16:05:29,524 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:08:04,214 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:08:04,216 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:08:04,283 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:08:04,977 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:08:05,388 - WARNING -  * Debugger is active!
+2025-07-10 16:08:05,389 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:11:27,196 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:11:27,198 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:11:27,245 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:11:27,694 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:11:28,118 - WARNING -  * Debugger is active!
+2025-07-10 16:11:28,119 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:11:28,826 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:11:29,083 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:11:29,638 - WARNING -  * Debugger is active!
+2025-07-10 16:11:29,639 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:12:04,715 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:12:04,717 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:12:04,769 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:12:05,540 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:12:06,058 - WARNING -  * Debugger is active!
+2025-07-10 16:12:06,059 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:12:21,128 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:12:21,130 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:12:21,171 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:12:22,173 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:12:22,622 - WARNING -  * Debugger is active!
+2025-07-10 16:12:22,623 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:12:38,465 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/app.py', reloading
+2025-07-10 16:12:39,446 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:12:39,885 - WARNING -  * Debugger is active!
+2025-07-10 16:12:39,885 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:12:46,451 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/apps.py', reloading
+2025-07-10 16:12:46,864 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:22:28,761 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.92.116:5000
+2025-07-10 16:22:28,761 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 16:22:28,770 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:22:29,187 - WARNING -  * Debugger is active!
+2025-07-10 16:22:29,188 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:30:39,811 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/conftest.py :', reloading
+2025-07-10 16:30:40,895 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:30:41,452 - WARNING -  * Debugger is active!
+2025-07-10 16:30:41,453 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:31:52,374 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:31:52,376 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:31:52,414 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:31:52,603 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:31:53,081 - WARNING -  * Debugger is active!
+2025-07-10 16:31:53,082 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:31:53,949 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:31:53,955 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:31:53,977 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:31:54,891 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:31:55,299 - WARNING -  * Debugger is active!
+2025-07-10 16:31:55,299 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:32:18,559 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:32:18,560 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:32:18,623 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:32:19,363 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:32:19,912 - WARNING -  * Debugger is active!
+2025-07-10 16:32:19,912 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:32:22,326 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:32:22,327 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:32:22,362 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/tests/tests.py', reloading
+2025-07-10 16:32:23,016 - INFO -  * Restarting with watchdog (inotify)
+2025-07-10 16:32:23,452 - WARNING -  * Debugger is active!
+2025-07-10 16:32:23,453 - INFO -  * Debugger PIN: 236-875-891
+2025-07-10 16:32:29,344 - ERROR - Erreur envoi email: SMTP Error
+2025-07-10 16:32:30,847 - ERROR - Erreur envoi SMS: HTTPSConnectionPool(host='sms-api.example.com', port=443): Max retries exceeded with url: /send (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f46ca0234d0>: Failed to resolve 'sms-api.example.com' ([Errno -2] Name or service not known)"))
+2025-07-10 16:32:32,554 - ERROR - Erreur envoi email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-ae6e7ef331fsm151399666b.69 - gsmtp')
+2025-07-10 16:32:53,050 - ERROR - Erreur envoi email: SMTP Error
+2025-07-10 16:32:53,808 - ERROR - Erreur envoi SMS: HTTPSConnectionPool(host='sms-api.example.com', port=443): Max retries exceeded with url: /send (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f3f2b868440>: Failed to resolve 'sms-api.example.com' ([Errno -2] Name or service not known)"))
+2025-07-10 16:32:55,435 - ERROR - Erreur envoi email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-ae6e8312d47sm151531266b.179 - gsmtp')
+2025-07-10 17:06:35,192 - ERROR - Erreur envoi email: SMTP Error
+2025-07-10 17:06:39,531 - ERROR - Erreur envoi SMS: HTTPSConnectionPool(host='sms-api.example.com', port=443): Max retries exceeded with url: /send (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f96e34038c0>: Failed to resolve 'sms-api.example.com' ([Errno -2] Name or service not known)"))
+2025-07-10 17:06:41,103 - ERROR - Erreur envoi email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-454d5032ff4sm62572445e9.8 - gsmtp')
+2025-07-10 17:07:31,570 - ERROR - Erreur envoi email: SMTP Error
+2025-07-10 17:07:34,403 - ERROR - Erreur envoi SMS: HTTPSConnectionPool(host='sms-api.example.com', port=443): Max retries exceeded with url: /send (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f71ed7078c0>: Failed to resolve 'sms-api.example.com' ([Errno -2] Name or service not known)"))
+2025-07-10 17:07:41,359 - ERROR - Erreur envoi email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-454dd540a8asm23771545e9.27 - gsmtp')
+2025-07-10 17:41:40,716 - INFO - Admin par défaut créé: username='admin', password='admin123'
+2025-07-10 17:41:40,948 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.92.116:5000
+2025-07-10 17:41:40,948 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 17:41:40,955 - INFO -  * Restarting with stat
+2025-07-10 17:41:41,387 - WARNING -  * Debugger is active!
+2025-07-10 17:41:41,388 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 17:41:51,261 - INFO - 127.0.0.1 - - [10/Jul/2025 17:41:51] "GET / HTTP/1.1" 200 -
+2025-07-10 17:41:54,563 - INFO - 127.0.0.1 - - [10/Jul/2025 17:41:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-10 17:43:24,297 - INFO - 127.0.0.1 - - [10/Jul/2025 17:43:24] "POST /api/payment/initiate HTTP/1.1" 200 -
+2025-07-10 17:43:24,332 - INFO - 127.0.0.1 - - [10/Jul/2025 17:43:24] "GET /payment?offer=basic HTTP/1.1" 200 -
+2025-07-10 17:43:25,107 - INFO - 127.0.0.1 - - [10/Jul/2025 17:43:25] "POST /api/payment/initiate HTTP/1.1" 200 -
+2025-07-10 18:00:31,941 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/app.py', reloading
+2025-07-10 18:00:32,060 - INFO -  * Restarting with stat
+2025-07-10 18:00:32,620 - WARNING -  * Debugger is active!
+2025-07-10 18:00:32,621 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 18:00:37,309 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.92.116:5000
+2025-07-10 18:00:37,309 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 18:00:37,310 - INFO -  * Restarting with stat
+2025-07-10 18:00:37,784 - WARNING -  * Debugger is active!
+2025-07-10 18:00:37,785 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 18:00:53,493 - INFO - 127.0.0.1 - - [10/Jul/2025 18:00:53] "POST /api/payment/initiate HTTP/1.1" 200 -
+2025-07-10 18:00:53,527 - INFO - 127.0.0.1 - - [10/Jul/2025 18:00:53] "GET /payment?offer=basic HTTP/1.1" 200 -
+2025-07-10 18:00:53,991 - INFO - 127.0.0.1 - - [10/Jul/2025 18:00:53] "POST /api/payment/initiate HTTP/1.1" 200 -
+2025-07-10 18:15:09,763 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/app.py', reloading
+2025-07-10 18:15:09,865 - INFO -  * Restarting with stat
+2025-07-10 18:15:11,266 - WARNING -  * Debugger is active!
+2025-07-10 18:15:11,267 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 18:15:15,524 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.92.116:5000
+2025-07-10 18:15:15,524 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 18:15:15,525 - INFO -  * Restarting with stat
+2025-07-10 18:15:15,960 - WARNING -  * Debugger is active!
+2025-07-10 18:15:15,960 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 18:50:28,541 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.92.116:5000
+2025-07-10 18:50:28,541 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 18:50:28,542 - INFO -  * Restarting with stat
+2025-07-10 18:50:28,954 - WARNING -  * Debugger is active!
+2025-07-10 18:50:28,955 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 18:50:33,570 - INFO - 127.0.0.1 - - [10/Jul/2025 18:50:33] "GET / HTTP/1.1" 200 -
+2025-07-10 18:50:33,874 - INFO - 127.0.0.1 - - [10/Jul/2025 18:50:33] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 19:06:40,846 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/create_admin.py', reloading
+2025-07-10 19:06:40,945 - INFO -  * Restarting with stat
+2025-07-10 19:06:41,434 - WARNING -  * Debugger is active!
+2025-07-10 19:06:41,435 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 19:07:20,630 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/create_admin.py', reloading
+2025-07-10 19:07:20,712 - INFO -  * Restarting with stat
+2025-07-10 19:07:21,131 - WARNING -  * Debugger is active!
+2025-07-10 19:07:21,131 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 19:07:24,157 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/create_admin.py', reloading
+2025-07-10 19:07:24,236 - INFO -  * Restarting with stat
+2025-07-10 19:07:24,672 - WARNING -  * Debugger is active!
+2025-07-10 19:07:24,673 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 19:07:27,697 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/create_admin.py', reloading
+2025-07-10 19:07:27,785 - INFO -  * Restarting with stat
+2025-07-10 19:07:28,272 - WARNING -  * Debugger is active!
+2025-07-10 19:07:28,272 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 19:08:46,682 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/create_admin.py', reloading
+2025-07-10 19:08:46,776 - INFO -  * Restarting with stat
+2025-07-10 19:08:47,257 - WARNING -  * Debugger is active!
+2025-07-10 19:08:47,257 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 19:18:31,102 - INFO - Admin par défaut créé: username='admin', password='admin123'
+2025-07-10 19:18:31,228 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.92.116:5000
+2025-07-10 19:18:31,228 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 19:18:31,229 - INFO -  * Restarting with stat
+2025-07-10 19:18:31,666 - WARNING -  * Debugger is active!
+2025-07-10 19:18:31,667 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 20:10:10,598 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/create_admin.py', reloading
+2025-07-10 20:10:10,698 - INFO -  * Restarting with stat
+2025-07-10 20:10:11,155 - WARNING -  * Debugger is active!
+2025-07-10 20:10:11,156 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 20:10:12,168 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/create_admin.py', reloading
+2025-07-10 20:10:12,274 - INFO -  * Restarting with stat
+2025-07-10 20:10:12,784 - WARNING -  * Debugger is active!
+2025-07-10 20:10:12,785 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 20:14:40,233 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.92.116:5000
+2025-07-10 20:14:40,233 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 20:14:40,234 - INFO -  * Restarting with stat
+2025-07-10 20:14:40,672 - WARNING -  * Debugger is active!
+2025-07-10 20:14:40,673 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 20:20:08,781 - INFO - 127.0.0.1 - - [10/Jul/2025 20:20:08] "GET / HTTP/1.1" 200 -
+2025-07-10 20:20:08,868 - INFO - 127.0.0.1 - - [10/Jul/2025 20:20:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-10 20:20:19,621 - INFO - 127.0.0.1 - - [10/Jul/2025 20:20:19] "POST /login HTTP/1.1" 200 -
+2025-07-10 20:20:19,656 - INFO - 127.0.0.1 - - [10/Jul/2025 20:20:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-10 21:17:33,217 - INFO - 127.0.0.1 - - [10/Jul/2025 21:17:33] "GET /login HTTP/1.1" 200 -
+2025-07-10 21:17:33,266 - INFO - 127.0.0.1 - - [10/Jul/2025 21:17:33] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 21:18:14,876 - INFO - 127.0.0.1 - - [10/Jul/2025 21:18:14] "GET / HTTP/1.1" 200 -
+2025-07-10 21:18:14,939 - INFO - 127.0.0.1 - - [10/Jul/2025 21:18:14] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 21:28:20,289 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.92.116:5000
+2025-07-10 21:28:20,289 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 21:28:20,290 - INFO -  * Restarting with stat
+2025-07-10 21:28:20,699 - WARNING -  * Debugger is active!
+2025-07-10 21:28:20,700 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 21:28:29,514 - INFO - 127.0.0.1 - - [10/Jul/2025 21:28:29] "GET / HTTP/1.1" 200 -
+2025-07-10 21:28:29,569 - INFO - 127.0.0.1 - - [10/Jul/2025 21:28:29] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 21:49:46,614 - INFO - 127.0.0.1 - - [10/Jul/2025 21:49:46] "GET / HTTP/1.1" 200 -
+2025-07-10 21:49:46,661 - INFO - 127.0.0.1 - - [10/Jul/2025 21:49:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 21:50:24,925 - INFO - 127.0.0.1 - - [10/Jul/2025 21:50:24] "GET / HTTP/1.1" 200 -
+2025-07-10 21:50:24,972 - INFO - 127.0.0.1 - - [10/Jul/2025 21:50:24] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 21:51:17,862 - INFO - 127.0.0.1 - - [10/Jul/2025 21:51:17] "POST /api/payment/initiate HTTP/1.1" 200 -
+2025-07-10 21:51:17,901 - INFO - 127.0.0.1 - - [10/Jul/2025 21:51:17] "GET /payment?offer=basic HTTP/1.1" 200 -
+2025-07-10 21:51:18,538 - INFO - 127.0.0.1 - - [10/Jul/2025 21:51:18] "POST /api/payment/initiate HTTP/1.1" 200 -
+2025-07-10 21:52:14,002 - INFO - 127.0.0.1 - - [10/Jul/2025 21:52:14] "GET / HTTP/1.1" 200 -
+2025-07-10 21:52:14,082 - INFO - 127.0.0.1 - - [10/Jul/2025 21:52:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-10 21:57:16,206 - INFO - 127.0.0.1 - - [10/Jul/2025 21:57:16] "GET / HTTP/1.1" 200 -
+2025-07-10 21:57:16,258 - INFO - 127.0.0.1 - - [10/Jul/2025 21:57:16] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 21:59:16,989 - INFO - 127.0.0.1 - - [10/Jul/2025 21:59:16] "GET / HTTP/1.1" 200 -
+2025-07-10 21:59:17,038 - INFO - 127.0.0.1 - - [10/Jul/2025 21:59:17] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 22:10:52,840 - INFO - 127.0.0.1 - - [10/Jul/2025 22:10:52] "GET / HTTP/1.1" 200 -
+2025-07-10 22:10:52,888 - INFO - 127.0.0.1 - - [10/Jul/2025 22:10:52] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 22:11:59,465 - INFO - 127.0.0.1 - - [10/Jul/2025 22:11:59] "GET / HTTP/1.1" 200 -
+2025-07-10 22:11:59,518 - INFO - 127.0.0.1 - - [10/Jul/2025 22:11:59] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 22:28:20,616 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.92.116:5000
+2025-07-10 22:28:20,616 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 22:28:20,617 - INFO -  * Restarting with stat
+2025-07-10 22:28:21,086 - WARNING -  * Debugger is active!
+2025-07-10 22:28:21,087 - INFO -  * Debugger PIN: 117-974-208
+2025-07-10 22:28:27,801 - INFO - 127.0.0.1 - - [10/Jul/2025 22:28:27] "GET / HTTP/1.1" 200 -
+2025-07-10 22:28:27,841 - INFO - 127.0.0.1 - - [10/Jul/2025 22:28:27] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 22:29:23,168 - INFO - 127.0.0.1 - - [10/Jul/2025 22:29:23] "GET / HTTP/1.1" 200 -
+2025-07-10 22:29:23,214 - INFO - 127.0.0.1 - - [10/Jul/2025 22:29:23] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 22:30:00,279 - INFO - 127.0.0.1 - - [10/Jul/2025 22:30:00] "GET / HTTP/1.1" 200 -
+2025-07-10 22:30:00,351 - INFO - 127.0.0.1 - - [10/Jul/2025 22:30:00] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-10 22:34:17,642 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/app.py', reloading
+2025-07-10 22:34:17,741 - INFO -  * Restarting with stat

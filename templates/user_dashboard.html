@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Mon Tableau de Bord - Portail WiFi{% endblock %}
+
+{% block body_class %}user-dashboard-body{% endblock %} {# Ajout de la classe spécifique au body #}
+
+{% block body %}
+    <div class="container user-dashboard-container"> {# Ajout de la classe spécifique au conteneur #}
+        <div class="header user-dashboard-header">
+            <h1>Bonjour, {{ user.username }}!</h1>
+            <p>Bienvenue sur votre tableau de bord WiFi.</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="message {{ category }}" style="display: block;">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="info-card">
+            <p><i class="fas fa-wifi icon"></i> Votre Abonnement: <strong>{{ offers[user.subscription_type].name if user.subscription_type else 'Aucun' }}</strong></p>
+            <p><i class="fas fa-calendar-alt icon"></i> Expire le: <strong>{{ user.subscription_expires or 'N/A' }}</strong></p>
+            <p><i class="fas fa-mobile-alt icon"></i> Appareils Max: <strong>{{ user.max_devices or 'N/A' }}</strong></p>
+            <p><i class="fas fa-envelope icon"></i> Email: <strong>{{ user.email or 'N/A' }}</strong></p>
+            <p><i class="fas fa-phone icon"></i> Téléphone: <strong>{{ user.phone or 'N/A' }}</strong></p>
+        </div>
+
+        <div class="btn-group">
+            <a href="{{ url_for('index') }}" class="btn">Renouveler l'abonnement</a>
+            <a href="#" class="btn btn-secondary" onclick="alert('Fonctionnalité non implémentée.')">Gérer les appareils</a>
+            <a href="#" class="btn btn-secondary" onclick="alert('Fonctionnalité non implémentée.')">Support</a>
+            <!-- Déconnexion via un formulaire POST pour une meilleure sécurité -->
+            <form action="{{ url_for('logout') }}" method="post" style="display:inline-block; width:100%;">
+                <button type="submit" class="btn btn-secondary w-full">Déconnexion</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

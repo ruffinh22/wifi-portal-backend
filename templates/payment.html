@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement - Portail WiFi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .container {
+            background: white;
+            border-radius: 1.25rem; /* 20px */
+            box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,0.1); /* 0 20px 40px */
+            overflow: hidden;
+            width: 100%;
+            max-width: 28rem; /* 448px */
+            text-align: center;
+            padding: 2rem;
+        }
+        .header {
+            color: #333;
+            margin-bottom: 1.5rem; /* 24px */
+        }
+        .header h1 {
+            font-size: 2rem; /* 32px */
+            font-weight: bold;
+            margin-bottom: 0.5rem; /* 8px */
+        }
+        .header p {
+            font-size: 1rem; /* 16px */
+            color: #666;
+        }
+        .offer-summary {
+            background: #f8f9fa;
+            border-radius: 0.75rem; /* 12px */
+            padding: 1.5rem; /* 24px */
+            margin-bottom: 2rem; /* 32px */
+            text-align: left;
+        }
+        .offer-summary p {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .offer-summary p strong {
+            color: #667eea;
+        }
+        .kkiapay-embed {
+            width: 100%;
+            height: 400px; /* Adjust as needed */
+            border: none;
+            border-radius: 0.75rem;
+        }
+        .btn-back {
+            margin-top: 1.5rem;
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #e1e5e9;
+            color: #333;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn-back:hover {
+            background: #d1d5db;
+        }
+        .message {
+            text-align: center;
+            margin-top: 1rem;
+            padding: 0.625rem;
+            border-radius: 0.3125rem;
+            display: none;
+        }
+        .message.error {
+            color: #e74c3c;
+            background: #fdf2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Confirmer votre paiement</h1>
+            <p>Veuillez vérifier les détails de votre offre et procéder au paiement.</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="message {{ category }}" style="display: block;">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="offer-summary">
+            <p>Offre sélectionnée: <strong>{{ offers[offer_type].name }}</strong></p>
+            <p>Durée: <strong>{{ offers[offer_type].duration }}</strong></p>
+            <p>Vitesse: <strong>{{ offers[offer_type].speed }}</strong></p>
+            <p>Appareils Max: <strong>{{ offers[offer_type].max_devices }}</strong></p>
+            <p class="text-2xl font-bold mt-4">Montant à payer: <span class="text-[#667eea]">{{ "{:,.0f}".format(price).replace(",", " ") }} FCFA</span></p>
+        </div>
+
+        <!-- KKiAPay Widget - Le script KKiAPay sera chargé et le widget affiché ici -->
+        <div id="kkiapay-container"></div>
+        
+        <a href="{{ url_for('index') }}" class="btn-back">Retour à l'accueil</a>
+    </div>
+
+    <script src="https://cdn.kkiapay.me/k.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const offerType = urlParams.get('offer');
+
+            if (!offerType) {
+                showFlashMessage('Offre non spécifiée. Retour à l\'accueil.', 'error');
+                setTimeout(() => window.location.href = '{{ url_for("index") }}', 2000);
+                return;
+            }
+
+            try {
+                // Récupérer les données de l'API Flask pour l'initiation du paiement
+                const response = await fetch('/api/payment/initiate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        offer_type: offerType,
+                        // Ces valeurs peuvent être stockées en session ou récupérées d'une autre manière
+                        // Pour cet exemple, nous allons les passer via l'URL si elles sont nécessaires
+                        // ou assumer qu'elles sont gérées côté serveur après la sélection de l'offre.
+                        // Dans un cas réel, vous auriez besoin de l'email et du téléphone de l'utilisateur ici.
+                        // Pour l'instant, on se base sur le fait que `initiate_payment` côté Flask
+                        // gère la création/récupération de l'utilisateur.
+                        email: '{{ session.get("email") or "temp@example.com" }}', // Placeholder si non en session
+                        phone: '{{ session.get("phone") or "22900000000" }}', // Placeholder si non en session
+                        payment_method: 'kkiapay'
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success && result.kkiapay_data) {
+                    const kkiapayData = result.kkiapay_data;
+                    
+                    // Initialiser le widget KKiAPay
+                    openKkiapayWidget({
+                        amount: kkiapayData.amount,
+                        api_key: kkiapayData.public_key,
+                        sandbox: true, // Mettez à false en production
+                        theme: "#667eea",
+                        callback: kkiapayData.callback_url,
+                        return_url: kkiapayData.return_url,
+                        cancel_url: kkiapayData.cancel_url,
+                        phone: kkiapayData.phone,
+                        data: kkiapayData.merchant_transaction_id // Passer notre transaction ID local
+                    });
+                } else {
+                    showFlashMessage(result.error || 'Échec de la préparation du paiement KKiAPay.', 'error');
+                }
+            } catch (error) {
+                console.error('Erreur lors de la récupération des données KKiAPay:', error);
+                showFlashMessage('Erreur de communication avec le serveur de paiement. Veuillez réessayer.', 'error');
+            }
+        });
+
+        function showFlashMessage(message, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = message;
+            messageDiv.classList.add('message', type);
+            messageDiv.style.display = 'block';
+            document.querySelector('.container').prepend(messageDiv);
+
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+                messageDiv.remove();
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

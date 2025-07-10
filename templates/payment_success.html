@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Paiement Réussi - Portail WiFi{% endblock %}
+
+{% block body_class %}payment-success-body{% endblock %} {# Ajout de la classe spécifique au body #}
+
+{% block body %}
+    <div class="container payment-success-container"> {# Ajout de la classe spécifique au conteneur #}
+        <div class="icon payment-success-icon">✅</div>
+        <h1 class="payment-success-h1">Paiement Réussi !</h1>
+        <p class="payment-success-p">Votre abonnement WiFi a été activé avec succès.</p>
+        <p class="payment-success-p">Vos identifiants de connexion vous ont été envoyés par email et/ou SMS.</p>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="message {{ category }}" style="display: block;">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <a href="{{ url_for('user_dashboard') }}" class="btn payment-success-btn">Accéder à mon tableau de bord</a>
+        <a href="{{ url_for('index') }}" class="btn payment-success-btn" style="margin-left: 1rem;">Retour à l'accueil</a>
+    </div>
+{% endblock %}

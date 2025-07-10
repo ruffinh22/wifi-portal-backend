@@ -1,0 +1,228 @@
+/* static/css/admin.css */
+
+body {
+    background-color: #f4f7f6;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #34495e 0%, #2c3e50 100%);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #a0aec0; /* Tailwind gray-400 */
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Dashboard Specific Styles */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: #34495e;
+}
+
+.stat-info h3 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.stat-info p {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Table Specific Styles (for Users and Transactions) */
+.table-container {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    overflow-x: auto; /* For responsiveness on small screens */
+    padding: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* Ensure table doesn't get too small */
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status Badges */
+.status-active {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.status-inactive {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.status-completed {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.status-pending {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.status-failed {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* Action Buttons */
+.action-btn {
+    background: #3498db;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: background 0.3s;
+    margin-right: 0.5rem; /* Espace entre les boutons */
+}
+
+.action-btn:hover {
+    background: #2980b9;
+}
+
+.deactivate-btn {
+    background: #e74c3c;
+}
+
+.deactivate-btn:hover {
+    background: #c0392b;
+}
+
+/* Admin Login Specific Styles */
+.admin-login-body {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%); /* Dark blue/grey gradient */
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.admin-login-container {
+    background: white;
+    border-radius: 1.25rem;
+    box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 25rem;
+    text-align: center;
+    padding: 2rem;
+}
+.admin-login-header {
+    color: #333;
+    margin-bottom: 2rem;
+}
+.admin-login-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.admin-login-header p {
+    font-size: 1rem;
+    color: #666;
+}
+.admin-login-form-group {
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+.admin-login-form-group label {
+    display: block;
+    margin-bottom: 0.3125rem;
+    font-weight: 500;
+    color: #333;
+}
+.admin-login-form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.admin-login-form-group input:focus {
+    outline: none;
+    border-color: #34495e;
+}
+.admin-login-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.admin-login-btn:hover {
+    transform: translateY(-0.125rem);
+}

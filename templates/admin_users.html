@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block title %}Gestion Utilisateurs - Admin - Portail WiFi{% endblock %}
+
+{% block body_class %}admin-body{% endblock %} {# Ajout de la classe spécifique au body #}
+
+{% block body %}
+    <nav class="navbar">
+        <div class="logo">Admin WiFi</div>
+        <div>
+            <a href="{{ url_for('admin_dashboard') }}">Tableau de Bord</a>
+            <a href="{{ url_for('admin_users') }}">Utilisateurs</a>
+            <a href="{{ url_for('admin_transactions') }}">Transactions</a>
+            <!-- Déconnexion via un formulaire POST pour une meilleure sécurité -->
+            <form action="{{ url_for('admin_logout') }}" method="post" style="display:inline;">
+                <button type="submit" class="text-white ml-6 font-medium bg-transparent border-none cursor-pointer hover:text-gray-400 transition duration-300">Déconnexion</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1 class="section-title">Gestion des Utilisateurs</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="message {{ category }}" style="display: block;">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom d'utilisateur</th>
+                        <th>Email</th>
+                        <th>Téléphone</th>
+                        <th>Abonnement</th>
+                        <th>Expire le</th>
+                        <th>Créé le</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email or 'N/A' }}</td>
+                        <td>{{ user.phone or 'N/A' }}</td>
+                        <td>{{ user.subscription_type or 'Aucun' }}</td>
+                        <td>{{ user.subscription_expires or 'N/A' }}</td>
+                        <td>{{ user.created_at }}</td>
+                        <td>
+                            {% if user.is_active %}
+                                <span class="status-active">Actif</span>
+                            {% else %}
+                                <span class="status-inactive">Inactif</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if user.is_active %}
+                                <button class="action-btn deactivate-btn" onclick="showConfirmationModal(parseInt('{{ user.id }}'), 'deactivate')">Désactiver</button>
+                            {% else %}
+                                <button class="action-btn" onclick="showConfirmationModal(parseInt('{{ user.id }}'), 'activate')">Activer</button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Custom Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="hideConfirmationModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalMessage"></p>
+            <div class="modal-actions">
+                <button id="confirmActionButton" class="action-btn"></button>
+                <button class="action-btn cancel-btn" onclick="hideConfirmationModal()">Annuler</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentUserId = null;
+        let currentActionType = null;
+
+        function showConfirmationModal(userId, actionType) {
+            currentUserId = userId;
+            currentActionType = actionType;
+
+            const modal = document.getElementById('confirmationModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
+            const confirmButton = document.getElementById('confirmActionButton');
+
+            if (actionType === 'deactivate') {
+                modalTitle.textContent = 'Confirmer la désactivation';
+                modalMessage.textContent = `Voulez-vous vraiment désactiver l'utilisateur avec l'ID ${userId} ?`;
+                confirmButton.textContent = 'Désactiver';
+                confirmButton.className = 'action-btn deactivate-btn';
+                confirmButton.onclick = () => deactivateUser(userId);
+            } else if (actionType === 'activate') {
+                modalTitle.textContent = 'Confirmer l\'activation';
+                modalMessage.textContent = `Voulez-vous vraiment activer l'utilisateur avec l'ID ${userId} ?`;
+                confirmButton.textContent = 'Activer';
+                confirmButton.className = 'action-btn'; // Revert to default action-btn style
+                confirmButton.onclick = () => activateUser(userId);
+            }
+            modal.style.display = 'flex'; // Use flex to center the modal content
+        }
+
+        function hideConfirmationModal() {
+            document.getElementById('confirmationModal').style.display = 'none';
+            currentUserId = null;
+            currentActionType = null;
+        }
+
+        async function deactivateUser(userId) {
+            hideConfirmationModal(); // Hide modal immediately on action
+            try {
+                const response = await fetch(`/api/users/${userId}/deactivate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const result = await response.json();
+                if (result.success) {
+                    // Utilise la fonction showFlashMessage du base.html
+                    showFlashMessage(`Utilisateur ${userId} désactivé avec succès.`, 'success');
+                    location.reload(); // Recharger la page pour voir les changements
+                } else {
+                    showFlashMessage(result.error || `Erreur lors de la désactivation de l'utilisateur ${userId}.`, 'error');
+                }
+            } catch (error) {
+                console.error('Erreur:', error);
+                showFlashMessage('Erreur de communication avec le serveur.', 'error');
+            }
+        }
+
+        async function activateUser(userId) {
+            hideConfirmationModal(); // Hide modal immediately on action
+            try {
+                const response = await fetch(`/api/users/${userId}/activate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const result = await response.json();
+                if (result.success) {
+                    // Utilise la fonction showFlashMessage du base.html
+                    showFlashMessage(`Utilisateur ${userId} activé avec succès.`, 'success');
+                    location.reload(); // Recharger la page pour voir les changements
+                } else {
+                    showFlashMessage(result.error || `Erreur lors de l'activation de l'utilisateur ${userId}.`, 'error');
+                }
+            } catch (error) {
+                console.error('Erreur:', error);
+                showFlashMessage('Erreur de communication avec le serveur.', 'error');
+            }
+        }
+    </script>
+{% endblock %}

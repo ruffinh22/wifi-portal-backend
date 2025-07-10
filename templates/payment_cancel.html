@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Paiement Annulé - Portail WiFi{% endblock %}
+
+{% block body_class %}payment-cancel-body{% endblock %} {# Ajout de la classe spécifique au body #}
+
+{% block body %}
+    <div class="container payment-cancel-container"> {# Ajout de la classe spécifique au conteneur #}
+        <div class="icon payment-cancel-icon">❌</div>
+        <h1 class="payment-cancel-h1">Paiement Annulé</h1>
+        <p class="payment-cancel-p">Votre transaction a été annulée. Vous pouvez réessayer à tout moment.</p>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="message {{ category }}" style="display: block;">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <a href="{{ url_for('index') }}" class="btn payment-cancel-btn">Retour à l'accueil</a>
+    </div>
+{% endblock %}

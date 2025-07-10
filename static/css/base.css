@@ -1,0 +1,35 @@
+/* static/css/base.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles communs pour les messages flash */
+.message {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    display: none; /* Hidden by default, shown by JS */
+    width: fit-content; /* Adjust width to content */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.message.error {
+    color: #e74c3c;
+    background: #fdf2f2;
+}
+
+.message.success {
+    color: #27ae60;
+    background: #f0fff4;
+}
+
+.message.info {
+    color: #3498db;
+    background: #eaf6fc;
+}

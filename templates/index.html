@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block title %}Connexion WiFi - Portail Captif{% endblock %}
+
+{% block body_class %}index-body{% endblock %} {# Ajout de la classe spécifique au body #}
+
+{% block body %}
+    <div class="container index-container"> {# Ajout de la classe spécifique au conteneur #}
+        <div class="header">
+            <div class="logo">🌐 WiFi Portal</div>
+            <div class="subtitle">Accès Internet Sécurisé</div>
+        </div>
+
+        <div class="form-container">
+            <div class="user-type">
+                <button type="button" class="active" onclick="switchUserType('existing')">
+                    Utilisateur Existant
+                </button>
+                <button type="button" onclick="switchUserType('new')">
+                    Nouvel Utilisateur
+                </button>
+            </div>
+
+            <!-- Flash Messages from Flask -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="message {{ category }}" style="display: block;">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <!-- Formulaire utilisateur existant -->
+            <div id="existingUserForm" class="existing-user-section">
+                <!-- IMPORTANT: L'action du formulaire doit pointer vers votre route Flask /login -->
+                <form name="login" method="post" action="{{ url_for('login') }}">
+                    <!-- Ces champs sont souvent utilisés par MikroTik, mais peuvent être omis si Flask gère tout -->
+                    <input type="hidden" name="dst" value="$(link-orig)" />
+                    <input type="hidden" name="popup" value="true" />
+                    
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur</label>
+                        <input type="text" id="username" name="username" required 
+                               placeholder="Votre nom d'utilisateur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" required 
+                               placeholder="Votre mot de passe">
+                    </div>
+
+                    <button type="submit" class="btn">Se Connecter</button>
+                </form>
+            </div>
+
+            <!-- Section nouvel utilisateur -->
+            <div id="newUserSection" class="new-user-section">
+                <h3 class="text-xl font-semibold mb-5 text-gray-800">Choisissez votre offre</h3>
+                
+                <div class="form-group">
+                    <label for="new-email">Votre Email</label>
+                    <input type="email" id="new-email" name="email" required 
+                           placeholder="exemple@domaine.com">
+                </div>
+                <div class="form-group">
+                    <label for="new-phone">Votre Téléphone (Ex: 229XXXXXXXX)</label>
+                    <input type="tel" id="new-phone" name="phone" required 
+                           placeholder="229XXXXXXXX">
+                </div>
+
+                <div class="offers-grid">
+                    {% for key, offer in offers.items() %}
+                    <div class="offer-card" data-offer-type="{{ key }}" data-offer-price="{{ offer.price }}">
+                        <div class="offer-title">{{ offer.name }}</div>
+                        <div class="offer-details">{{ offer.duration }} • {{ offer.speed }} • {{ offer.max_devices }} appareil(s)</div>
+                        <div class="offer-price">{{ "{:,.0f}".format(offer.price).replace(",", " ") }} FCFA</div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <button type="button" class="btn" onclick="proceedToPayment()" disabled id="paymentBtn">
+                    Procéder au Paiement
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedOfferType = null;
+        let selectedPrice = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add event listeners for offer cards
+            document.querySelectorAll('.offer-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    selectOffer(this.dataset.offerType, parseInt(this.dataset.offerPrice));
+                });
+            });
+        });
+
+        function switchUserType(type) {
+            const existingBtn = document.querySelector('.user-type button:first-child');
+            const newBtn = document.querySelector('.user-type button:last-child');
+            const existingForm = document.getElementById('existingUserForm');
+            const newSection = document.getElementById('newUserSection');
+
+            if (type === 'existing') {
+                existingBtn.classList.add('active');
+                newBtn.classList.remove('active');
+                existingForm.style.display = 'block';
+                newSection.classList.remove('active');
+            } else {
+                newBtn.classList.add('active');
+                existingBtn.classList.remove('active');
+                existingForm.style.display = 'none';
+                newSection.classList.add('active');
+            }
+        }
+
+        function selectOffer(offerType, price) {
+            document.querySelectorAll('.offer-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            document.querySelector(`.offer-card[data-offer-type="${offerType}"]`).classList.add('selected');
+            
+            selectedOfferType = offerType;
+            selectedPrice = price;
+            
+            document.getElementById('paymentBtn').disabled = false;
+        }
+
+        async function proceedToPayment() {
+            if (!selectedOfferType) {
+                showFlashMessage('Veuillez sélectionner une offre.', 'error');
+                return;
+            }
+
+            const email = document.getElementById('new-email').value;
+            const phone = document.getElementById('new-phone').value;
+
+            if (!email || !phone) {
+                showFlashMessage('Veuillez renseigner votre email et votre numéro de téléphone.', 'error');
+                return;
+            }
+
+            // Appel à l'API Flask pour initier le paiement
+            try {
+                const response = await fetch('/api/payment/initiate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        phone: phone,
+                        offer_type: selectedOfferType,
+                        payment_method: 'kkiapay' // Ou dynamiquement si plusieurs méthodes
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Rediriger vers la page de paiement de votre application Flask
+                    // qui va afficher le widget KKiAPay
+                    window.location.href = `/payment?offer=${selectedOfferType}`;
+                } else {
+                    showFlashMessage(result.error || 'Erreur lors de l\'initiation du paiement.', 'error');
+                }
+            } catch (error) {
+                console.error('Erreur réseau:', error);
+                showFlashMessage('Erreur de communication avec le serveur. Veuillez réessayer.', 'error');
+            }
+        }
+
+        // Initialiser le type d'utilisateur par défaut
+        switchUserType('existing');
+    </script>
+{% endblock %}

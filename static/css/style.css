@@ -1,0 +1,974 @@
+/* static/css/style.css - Fichier CSS unifié et optimisé pour un rendu professionnel */
+
+/* --- Base Styles (appliqués à toutes les pages via base.html) --- */
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh; /* S'assure que le corps prend toute la hauteur de la vue */
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* Supprime les marges par défaut du body */
+    background-color: #f0f2f5; /* Couleur de fond par défaut, peut être écrasée par des classes spécifiques */
+}
+
+/* Styles communs pour les messages flash */
+.message {
+    text-align: center;
+    margin: 1rem auto; /* Centre le message horizontalement */
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem; /* Coins plus arrondis */
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Légère ombre pour le relief */
+    display: none; /* Hidden by default, shown by JS */
+    width: fit-content; /* Ajuste la largeur au contenu */
+    max-width: 90%; /* Limite la largeur sur les petits écrans */
+    animation: fadeInOut 5s forwards; /* Animation d'apparition/disparition */
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.message.error {
+    color: #c0392b; /* Rouge plus profond */
+    background: #ffebee; /* Fond rouge très clair */
+    border: 1px solid #e74c3c;
+}
+
+.message.success {
+    color: #229954; /* Vert plus profond */
+    background: #e8f5e9; /* Fond vert très clair */
+    border: 1px solid #27ae60;
+}
+
+.message.info {
+    color: #2874a6; /* Bleu plus profond */
+    background: #eaf2f8; /* Fond bleu très clair */
+    border: 1px solid #3498db;
+}
+
+/* --- Styles spécifiques aux pages (pour centrer et resserrer) --- */
+
+/* Styles pour le body des pages de connexion/inscription (index.html) */
+.index-body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Dégradé violet-bleu */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+    padding: 1.5rem; /* Marge intérieure pour éviter que le contenu ne touche les bords */
+}
+
+/* Conteneur principal pour les pages de connexion/inscription */
+.index-container {
+    background: white;
+    border-radius: 1.5rem; /* Plus arrondi */
+    box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.15); /* Ombre plus prononcée */
+    overflow: hidden;
+    width: 100%;
+    max-width: 22rem; /* Légèrement plus large que 20rem, mais toujours resserré */
+    padding: 0; /* Le padding sera dans .form-container */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur/hauteur */
+}
+
+/* En-tête des formulaires (login/register) */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem; /* Plus de padding */
+    text-align: center;
+    border-bottom-left-radius: 1.5rem; /* Coins inférieurs arrondis pour l'en-tête */
+    border-bottom-right-radius: 1.5rem;
+}
+
+.header .logo {
+    font-size: 2.2rem; /* Légèrement plus grand */
+    font-weight: 700; /* Plus gras */
+    margin-bottom: 0.8rem;
+}
+
+.header .subtitle {
+    opacity: 0.95;
+    font-size: 1.1rem;
+}
+
+.form-container {
+    padding: 2rem; /* Padding interne du conteneur de formulaire */
+}
+
+/* Boutons de sélection de type d'utilisateur (Existant/Nouveau) */
+.user-type {
+    display: flex;
+    margin-bottom: 2rem;
+    background: #f0f2f5; /* Fond clair pour les boutons de type */
+    border-radius: 0.75rem; /* Plus arrondi */
+    padding: 0.4rem; /* Plus de padding interne */
+}
+
+.user-type button {
+    flex: 1;
+    padding: 0.8rem 1rem; /* Plus de padding */
+    border: none;
+    background: transparent;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.user-type button.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Groupes de formulaires (label + input) */
+.form-group {
+    margin-bottom: 1.5rem; /* Plus d'espace entre les groupes */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.9rem; /* Plus de padding */
+    border: 1px solid #d1d5db; /* Bordure plus douce */
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Inclut padding et border dans la largeur */
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2); /* Ombre de focus subtile */
+}
+
+/* Boutons généraux */
+.btn {
+    width: 100%;
+    padding: 1rem; /* Plus de padding */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.1rem; /* Plus grand */
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px); /* Effet de soulèvement plus prononcé */
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Séparateur "OU" */
+.divider {
+    text-align: center;
+    margin: 1.8rem 0;
+    color: #888;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e1e5e9;
+    z-index: 1;
+}
+
+.divider span {
+    background: white;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Sections nouvel utilisateur */
+.new-user-section {
+    display: none;
+    text-align: center;
+}
+
+.new-user-section.active {
+    display: block;
+}
+
+/* Grille des offres */
+.offers-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne par défaut */
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.offer-card {
+    border: 2px solid #e1e5e9;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    background-color: #fdfdfd;
+}
+
+.offer-card:hover {
+    border-color: #667eea;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.offer-card.selected {
+    border-color: #667eea;
+    background: #eef2ff; /* Fond légèrement bleuté pour la sélection */
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.offer-title {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.offer-details {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.offer-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+/* Media Queries pour la réactivité */
+@media (max-width: 768px) {
+    .index-container {
+        max-width: 90%; /* Prend plus de place sur les tablettes */
+    }
+    .form-container {
+        padding: 1.5rem;
+    }
+    .header {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .index-container {
+        margin: 1rem; /* Marge plus petite sur les très petits écrans */
+        border-radius: 1rem;
+    }
+    .header {
+        padding: 1.2rem;
+    }
+    .form-container {
+        padding: 1.2rem;
+    }
+    .btn {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+/* --- Admin Styles (pour les pages admin) --- */
+.admin-body {
+    background-color: #f8f9fa; /* Fond plus clair et doux */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%); /* Dégradé sombre */
+    color: white;
+    padding: 1rem 2.5rem; /* Plus de padding latéral */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15); /* Ombre plus prononcée */
+    position: sticky; /* Reste en haut lors du défilement */
+    top: 0;
+    z-index: 500;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem; /* Plus d'espace entre les liens */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #a0aec0; /* Un gris plus clair */
+    transform: translateY(-2px);
+}
+
+.navbar .logo {
+    font-size: 1.6rem; /* Légèrement plus grand */
+    font-weight: 700;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 2.5rem; /* Plus de padding */
+    max-width: 1200px; /* Limite la largeur du contenu principal */
+    margin: 0 auto; /* Centre le contenu principal */
+    width: 100%; /* S'assure que le contenu prend toute la largeur disponible jusqu'à max-width */
+    box-sizing: border-box;
+}
+
+.section-title {
+    font-size: 2rem; /* Plus grand */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem; /* Plus d'espace */
+    border-bottom: 2px solid #eee; /* Ligne de séparation */
+    padding-bottom: 0.8rem;
+}
+
+/* Dashboard Specific Styles */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Cartes légèrement plus grandes */
+    gap: 1.8rem; /* Plus d'espace entre les cartes */
+    margin-bottom: 2.5rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 1rem; /* Plus arrondi */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Ombre plus douce et prononcée */
+    padding: 2rem; /* Plus de padding */
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px); /* Effet de soulèvement */
+}
+
+.stat-icon {
+    font-size: 3rem; /* Plus grande icône */
+    color: #34495e; /* Couleur de la navbar */
+}
+
+.stat-info h3 {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.stat-info p {
+    font-size: 2rem; /* Plus grand */
+    font-weight: 700;
+    color: #333;
+}
+
+/* Table Specific Styles (for Users and Transactions) */
+.table-container {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    overflow-x: auto; /* For responsiveness on small screens */
+    padding: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Permet border-radius sur les cellules */
+    border-spacing: 0;
+    min-width: 900px; /* S'assure que le tableau ne devient pas trop petit */
+}
+
+th, td {
+    padding: 1rem 1.2rem; /* Plus de padding */
+    text-align: left;
+    border-bottom: 1px solid #ebf1f5; /* Bordure plus claire */
+}
+
+th {
+    background-color: #f0f2f5; /* Fond plus doux pour les en-têtes */
+    font-weight: 600;
+    color: #444;
+    position: sticky; /* Rend les en-têtes collants lors du défilement */
+    top: 0;
+    z-index: 10;
+}
+
+/* Coins arrondis pour les en-têtes de tableau */
+table thead th:first-child {
+    border-top-left-radius: 0.8rem;
+}
+table thead th:last-child {
+    border-top-right-radius: 0.8rem;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f5f8fa; /* Effet de survol pour les lignes */
+}
+
+/* Status Badges */
+.status-active, .status-completed {
+    color: #1e8449; /* Vert plus foncé */
+    background-color: #e6f7ed; /* Fond vert très clair */
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.status-inactive, .status-failed {
+    color: #c0392b; /* Rouge plus foncé */
+    background-color: #fde8e8; /* Fond rouge très clair */
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.status-pending {
+    color: #d35400; /* Orange plus foncé */
+    background-color: #fff3e6; /* Fond orange très clair */
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Action Buttons dans les tableaux */
+.action-btn {
+    background: #3498db; /* Bleu standard */
+    color: white;
+    padding: 0.5rem 1rem; /* Plus de padding */
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-right: 0.6rem;
+    display: inline-flex; /* Pour un meilleur alignement */
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.deactivate-btn {
+    background: #e74c3c; /* Rouge pour désactiver */
+}
+
+.deactivate-btn:hover {
+    background: #c0392b;
+}
+
+/* Admin Login Specific Styles */
+.admin-login-body {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%); /* Dégradé bleu/gris foncé */
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+.admin-login-container {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.15);
+    overflow: hidden;
+    width: 100%;
+    max-width: 22rem; /* Resserré et centré */
+    text-align: center;
+    padding: 2.5rem; /* Plus de padding interne */
+    box-sizing: border-box;
+}
+.admin-login-header {
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+.admin-login-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+.admin-login-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+.admin-login-form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.admin-login-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+.admin-login-form-group input {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+.admin-login-form-group input:focus {
+    outline: none;
+    border-color: #34495e;
+    box-shadow: 0 0 0 3px rgba(52, 73, 94, 0.2);
+}
+.admin-login-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(52, 73, 94, 0.3);
+}
+.admin-login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(52, 73, 94, 0.4);
+}
+
+/* --- User Dashboard Styles --- */
+.user-dashboard-body {
+    background: linear-gradient(135deg, #a8c0ff 0%, #392b58 100%); /* Dégradé bleu clair à violet foncé */
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.user-dashboard-container {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.15);
+    overflow: hidden;
+    width: 100%;
+    max-width: 36rem; /* Légèrement plus large pour le tableau de bord utilisateur */
+    text-align: center;
+    padding: 2.5rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.user-dashboard-header {
+    margin-bottom: 2.5rem;
+}
+
+.user-dashboard-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: #392b58; /* Couleur du dégradé */
+}
+
+.user-dashboard-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.info-card {
+    background: #f8f9fa;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.info-card p {
+    margin-bottom: 0.8rem;
+    color: #333;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.info-card p strong {
+    color: #392b58;
+    margin-left: 0.5rem;
+}
+
+.info-card .icon {
+    margin-right: 0.8rem;
+    color: #667eea;
+    font-size: 1.2rem;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.btn-secondary {
+    background: #e1e5e9;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-secondary:hover {
+    background: #cdd2d8;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* --- Payment Styles --- */
+.payment-body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.payment-container {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.15);
+    overflow: hidden;
+    width: 100%;
+    max-width: 30rem; /* Resserré et centré */
+    text-align: center;
+    padding: 2.5rem;
+    box-sizing: border-box;
+}
+
+.payment-header {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.payment-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.payment-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.offer-summary {
+    background: #f8f9fa;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.offer-summary p {
+    margin-bottom: 0.8rem;
+    color: #333;
+    font-size: 1rem;
+}
+
+.offer-summary p strong {
+    color: #667eea;
+}
+
+.offer-summary .text-2xl { /* Style pour le montant total */
+    font-size: 1.8rem; /* Légèrement plus petit que 2xl pour l'équilibre */
+    margin-top: 1.5rem;
+}
+
+.kkiapay-embed {
+    width: 100%;
+    height: 450px; /* Hauteur ajustée pour une meilleure visualisation */
+    border: 1px solid #e1e5e9; /* Bordure légère */
+    border-radius: 1rem;
+}
+
+.btn-back {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background: #e1e5e9;
+    color: #333;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.btn-back:hover {
+    background: #cdd2d8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* --- Payment Success Styles --- */
+.payment-success-body {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); /* Dégradé vert */
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.payment-success-container {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.15);
+    overflow: hidden;
+    width: 100%;
+    max-width: 30rem;
+    text-align: center;
+    padding: 2.5rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.payment-success-icon {
+    font-size: 4.5rem; /* Icône plus grande */
+    color: #27ae60;
+    margin-bottom: 2rem;
+    animation: bounceIn 0.8s ease-out; /* Animation d'apparition */
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.payment-success-h1 {
+    font-size: 2.4rem; /* Titre plus grand */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.payment-success-p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.payment-success-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    color: white;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+}
+
+.payment-success-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(39, 174, 96, 0.4);
+}
+
+/* --- Payment Cancel Styles --- */
+.payment-cancel-body {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); /* Dégradé rouge */
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.payment-cancel-container {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.15);
+    overflow: hidden;
+    width: 100%;
+    max-width: 30rem;
+    text-align: center;
+    padding: 2.5rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.payment-cancel-icon {
+    font-size: 4.5rem;
+    color: #e74c3c;
+    margin-bottom: 2rem;
+    animation: shake 0.5s ease-in-out; /* Animation de secousse */
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}
+
+.payment-cancel-h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.payment-cancel-p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.payment-cancel-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+.payment-cancel-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* --- Custom Modal Styles (pour les confirmations comme dans admin_users.html) --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    display: flex; /* Utilise flexbox pour centrer */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    animation: fadeIn 0.3s ease-out; /* Animation d'apparition */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 2.5rem; /* Plus de padding */
+    border-radius: 1rem; /* Plus arrondi */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Ombre plus prononcée */
+    width: 90%;
+    max-width: 450px; /* Max width pour la modale */
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    animation: slideIn 0.4s ease-out; /* Animation de glissement */
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px; /* Plus grande */
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    font-size: 1.8rem; /* Plus grand */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.modal-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espace entre les boutons */
+}
+
+.modal-actions .action-btn {
+    width: auto; /* Override full width from general .btn */
+    padding: 0.8rem 1.8rem; /* Plus de padding */
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.6rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.modal-actions .action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.modal-actions .cancel-btn {
+    background: #d1d5db; /* Gris plus doux */
+    color: #444;
+}
+
+.modal-actions .cancel-btn:hover {
+    background: #b0b5bd;
+}

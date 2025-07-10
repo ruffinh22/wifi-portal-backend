@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Tableau de Bord Admin - Portail WiFi{% endblock %}
+
+{% block body_class %}admin-body{% endblock %} {# Ajout de la classe spécifique au body #}
+
+{% block body %}
+    <nav class="navbar">
+        <div class="logo">Admin WiFi</div>
+        <div>
+            <a href="{{ url_for('admin_dashboard') }}">Tableau de Bord</a>
+            <a href="{{ url_for('admin_users') }}">Utilisateurs</a>
+            <a href="{{ url_for('admin_transactions') }}">Transactions</a>
+            <form action="{{ url_for('admin_logout') }}" method="post" style="display:inline;">
+                <button type="submit" class="text-white ml-6 font-medium bg-transparent border-none cursor-pointer hover:text-gray-400 transition duration-300">Déconnexion</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1 class="section-title">Tableau de Bord Administrateur</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="message {{ category }}" style="display: block;">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-users stat-icon"></i>
+                <div class="stat-info">
+                    <h3>Total Utilisateurs</h3>
+                    <p>{{ stats.total_users }}</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-exchange-alt stat-icon"></i>
+                <div class="stat-info">
+                    <h3>Transactions Terminées</h3>
+                    <p>{{ "{:,.0f}".format(stats.total_transactions).replace(",", " ") }}</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-money-bill-wave stat-icon"></i>
+                <div class="stat-info">
+                    <h3>Revenus Totaux</h3>
+                    <p>{{ "{:,.0f}".format(stats.total_revenue).replace(",", " ") }} FCFA</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-wifi stat-icon"></i>
+                <div class="stat-info">
+                    <h3>Sessions Actives</h3>
+                    <p>{{ stats.active_sessions }}</p>
+                </div>
+            </div>
+        </div>
+
+        {# You can add more sections here, e.g., recent activities, charts #}
+    </div>
+{% endblock %}

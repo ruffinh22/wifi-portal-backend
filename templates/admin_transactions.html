@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Gestion Transactions - Admin - Portail WiFi{% endblock %}
+
+{% block body_class %}admin-body{% endblock %} {# Ajout de la classe spécifique au body #}
+
+{% block body %}
+    <nav class="navbar">
+        <div class="logo">Admin WiFi</div>
+        <div>
+            <a href="{{ url_for('admin_dashboard') }}">Tableau de Bord</a>
+            <a href="{{ url_for('admin_users') }}">Utilisateurs</a>
+            <a href="{{ url_for('admin_transactions') }}">Transactions</a>
+            <!-- Déconnexion via un formulaire POST pour une meilleure sécurité -->
+            <form action="{{ url_for('admin_logout') }}" method="post" style="display:inline;">
+                <button type="submit" class="text-white ml-6 font-medium bg-transparent border-none cursor-pointer hover:text-gray-400 transition duration-300">Déconnexion</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1 class="section-title">Gestion des Transactions</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="message {{ category }}" style="display: block;">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Utilisateur</th>
+                        <th>Transaction ID (Local)</th>
+                        <th>Transaction ID (KKiAPay)</th>
+                        <th>Montant</th>
+                        <th>Méthode</th>
+                        <th>Téléphone</th>
+                        <th>Offre</th>
+                        <th>Statut</th>
+                        <th>Date Création</th>
+                        <th>Date Mise à Jour</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transaction in transactions %}
+                    <tr>
+                        <td>{{ transaction.id }}</td>
+                        <td>{{ transaction.username or 'N/A' }}</td>
+                        <td>{{ transaction.transaction_id }}</td>
+                        <td>{{ transaction.kkiapay_transaction_id or 'N/A' }}</td>
+                        <td>{{ "{:,.0f}".format(transaction.amount).replace(",", " ") }} {{ transaction.currency }}</td>
+                        <td>{{ transaction.payment_method }}</td>
+                        <td>{{ transaction.phone_number }}</td>
+                        <td>{{ transaction.offer_type }}</td>
+                        <td>
+                            {% if transaction.status == 'completed' %}
+                                <span class="status-completed">Terminée</span>
+                            {% elif transaction.status == 'pending' %}
+                                <span class="status-pending">En Attente</span>
+                            {% else %}
+                                <span class="status-failed">Échouée</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ transaction.created_at }}</td>
+                        <td>{{ transaction.updated_at }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
