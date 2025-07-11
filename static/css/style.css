@@ -313,6 +313,7 @@ body {
     box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
 }
 
+
 .btn:hover {
     transform: translateY(-3px); /* Effet de soulèvement plus prononcé */
     box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
