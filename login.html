@@ -1,0 +1,56 @@
+<!-- Contenu pour login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WiFi Portal</title>
+    <meta http-equiv="refresh" content="0; url=https://wifi-portal-backend.onrender.com/">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin-top: 100px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container { 
+            max-width: 400px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        .spinner { 
+            border: 4px solid #f3f3f3; 
+            border-top: 4px solid #3498db; 
+            border-radius: 50%; 
+            width: 40px; 
+            height: 40px; 
+            animation: spin 1s linear infinite; 
+            margin: 20px auto; 
+        }
+        @keyframes spin { 
+            0% { transform: rotate(0deg); } 
+            100% { transform: rotate(360deg); } 
+        }
+        a { 
+            color: #fff; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Portail WiFi</h1>
+        <div class="spinner"></div>
+        <p>Redirection vers le portail...</p>
+        <p><a href="https://wifi-portal-backend.onrender.com/">Cliquez ici si la redirection ne fonctionne pas</a></p>
+    </div>
+    
+    <script>
+        // Redirection JavaScript de secours
+        setTimeout(function() {
+            window.location.href = "https://wifi-portal-backend.onrender.com/";
+        }, 2000);
+    </script>
+</body>
+</html>
