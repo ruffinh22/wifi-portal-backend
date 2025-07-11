@@ -1106,6 +1106,39 @@ def revenue_stats():
 
     return jsonify({'success': True, 'data': data_list})
 
+@app.route('/init-admin', methods=['GET', 'POST'])
+def init_admin():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
+        # Vérifier si un admin existe déjà
+        conn = sqlite3.connect(DATABASE)
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM admins WHERE username = ?', (username,))
+        
+        if cursor.fetchone():
+            flash('Administrateur déjà existant')
+        else:
+            hashed_password = hashlib.sha256(password.encode()).hexdigest()
+            cursor.execute('''
+                INSERT INTO admins (username, password_hash, created_at)
+                VALUES (?, ?, datetime('now'))
+            ''', (username, hashed_password))
+
+            conn.commit()
+            flash('Administrateur créé avec succès !')
+        
+        conn.close()
+        return redirect(url_for('admin_login'))
+    
+    return '''
+    <form method="post">
+        <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+        <input type="password" name="password" placeholder="Mot de passe" required>
+        <button type="submit">Créer Admin</button>
+    </form>
+    '''
 # === POINT D'ENTRÉE ===
 
 if __name__ == '__main__':

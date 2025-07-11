@@ -522,3 +522,101 @@
 2025-07-11 09:51:55,670 - INFO - [33mPress CTRL+C to quit[0m
 2025-07-11 09:52:04,739 - INFO - 127.0.0.1 - - [11/Jul/2025 09:52:04] "GET / HTTP/1.1" 200 -
 2025-07-11 09:52:04,948 - INFO - 127.0.0.1 - - [11/Jul/2025 09:52:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-11 10:08:02,348 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.206.47:5000
+2025-07-11 10:08:02,348 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 10:08:06,481 - INFO - 127.0.0.1 - - [11/Jul/2025 10:08:06] "GET /init-admin HTTP/1.1" 200 -
+2025-07-11 10:08:25,840 - INFO - 127.0.0.1 - - [11/Jul/2025 10:08:25] "[32mPOST /init-admin HTTP/1.1[0m" 302 -
+2025-07-11 10:08:25,874 - INFO - 127.0.0.1 - - [11/Jul/2025 10:08:25] "GET /admin/login HTTP/1.1" 200 -
+2025-07-11 10:08:25,953 - INFO - 127.0.0.1 - - [11/Jul/2025 10:08:25] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 10:08:43,226 - INFO - 127.0.0.1 - - [11/Jul/2025 10:08:43] "POST /admin/login HTTP/1.1" 200 -
+2025-07-11 10:08:43,267 - INFO - 127.0.0.1 - - [11/Jul/2025 10:08:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-11 10:09:43,059 - INFO - 127.0.0.1 - - [11/Jul/2025 10:09:43] "GET /admin/login HTTP/1.1" 200 -
+2025-07-11 10:10:00,930 - ERROR - Exception on /init-admin [POST]
+Traceback (most recent call last):
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/wifi_portal_backend/app.py", line 1124, in init_admin
+    cursor.execute('''
+sqlite3.OperationalError: table admins has no column named password
+2025-07-11 10:10:00,976 - INFO - 127.0.0.1 - - [11/Jul/2025 10:10:00] "[35m[1mPOST /init-admin HTTP/1.1[0m" 500 -
+2025-07-11 10:10:05,331 - INFO - 127.0.0.1 - - [11/Jul/2025 10:10:05] "GET /init-admin HTTP/1.1" 200 -
+2025-07-11 10:10:07,866 - INFO - 127.0.0.1 - - [11/Jul/2025 10:10:07] "GET /init-admin HTTP/1.1" 200 -
+2025-07-11 10:10:11,207 - INFO - 127.0.0.1 - - [11/Jul/2025 10:10:11] "GET /init-admin HTTP/1.1" 200 -
+2025-07-11 10:10:29,330 - ERROR - Exception on /init-admin [POST]
+Traceback (most recent call last):
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/wifi_portal_backend/app.py", line 1124, in init_admin
+    cursor.execute('''
+sqlite3.OperationalError: table admins has no column named password
+2025-07-11 10:10:29,332 - INFO - 127.0.0.1 - - [11/Jul/2025 10:10:29] "[35m[1mPOST /init-admin HTTP/1.1[0m" 500 -
+2025-07-11 10:10:44,984 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.206.47:5000
+2025-07-11 10:10:44,984 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 10:10:54,557 - ERROR - Exception on /init-admin [POST]
+Traceback (most recent call last):
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/anaconda3/envs/envrl/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lidruf/wifi_portal_backend/app.py", line 1124, in init_admin
+    cursor.execute('''
+sqlite3.OperationalError: table admins has no column named password
+2025-07-11 10:10:54,560 - INFO - 127.0.0.1 - - [11/Jul/2025 10:10:54] "[35m[1mPOST /init-admin HTTP/1.1[0m" 500 -
+2025-07-11 10:14:20,143 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.206.47:5000
+2025-07-11 10:14:20,143 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 10:14:27,344 - INFO - 127.0.0.1 - - [11/Jul/2025 10:14:27] "GET /init-admin HTTP/1.1" 200 -
+2025-07-11 10:14:38,417 - INFO - 127.0.0.1 - - [11/Jul/2025 10:14:38] "[32mPOST /init-admin HTTP/1.1[0m" 302 -
+2025-07-11 10:14:38,448 - INFO - 127.0.0.1 - - [11/Jul/2025 10:14:38] "GET /admin/login HTTP/1.1" 200 -
+2025-07-11 10:14:38,528 - INFO - 127.0.0.1 - - [11/Jul/2025 10:14:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-11 10:14:51,632 - INFO - 127.0.0.1 - - [11/Jul/2025 10:14:51] "[32mPOST /init-admin HTTP/1.1[0m" 302 -
+2025-07-11 10:14:51,641 - INFO - 127.0.0.1 - - [11/Jul/2025 10:14:51] "GET /admin/login HTTP/1.1" 200 -
+2025-07-11 10:14:51,697 - INFO - 127.0.0.1 - - [11/Jul/2025 10:14:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-11 10:15:11,107 - INFO - 127.0.0.1 - - [11/Jul/2025 10:15:11] "[32mPOST /admin/login HTTP/1.1[0m" 302 -
+2025-07-11 10:15:11,139 - INFO - 127.0.0.1 - - [11/Jul/2025 10:15:11] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-07-11 10:15:11,186 - INFO - 127.0.0.1 - - [11/Jul/2025 10:15:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
