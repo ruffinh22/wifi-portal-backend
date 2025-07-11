@@ -1,13 +1,116 @@
-/* static/css/style.css - Fichier CSS unifié et optimisé pour un rendu professionnel */
+/* static/css/style.css - Fichier CSS modernisé pour un portail captif */
 
-/* --- Base Styles (appliqués à toutes les pages via base.html) --- */
+/* --- Base Styles --- */
 body {
     font-family: 'Inter', sans-serif;
-    min-height: 100vh; /* S'assure que le corps prend toute la hauteur de la vue */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    margin: 0; /* Supprime les marges par défaut du body */
-    background-color: #f0f2f5; /* Couleur de fond par défaut, peut être écrasée par des classes spécifiques */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
+/* Conteneur principal */
+.container {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 90%; /* Largeur responsive */
+    max-width: 500px; /* Largeur maximale */
+    text-align: center; /* Centre le texte */
+}
+
+/* En-tête */
+.header {
+    margin-bottom: 1.5rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Boutons */
+.btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 10%; /* Prend toute la largeur */
+    margin-top: 1rem; /* Ajoute un espace entre les boutons */
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Messages Flash */
+.message {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: none; /* Caché par défaut */
+}
+
+.message.success {
+    background: #e8f5e9;
+    color: #229954;
+}
+
+.message.error {
+    background: #ffebee;
+    color: #c0392b;
+}
+
+/* Grille des offres */
+.offers-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne */
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.offer-card {
+    border: 2px solid #e1e5e9;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+    border-color: #667eea;
+    transform: translateY(-3px);
+}
+
+/* Sections nouvel utilisateur */
+.new-user-section {
+    display: none;
+    text-align: center;
+}
+
+.new-user-section.active {
+    display: block;
+}
+
+/* Media Queries pour la réactivité */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
 }
 
 /* Styles communs pour les messages flash */
@@ -92,9 +195,52 @@ body {
     font-size: 1.1rem;
 }
 
+
 .form-container {
-    padding: 2rem; /* Padding interne du conteneur de formulaire */
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.form-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Version sombre alternative */
+.form-container.dark {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Version avec gradient */
+.form-container.gradient {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.9) 0%, 
+        rgba(248, 250, 252, 0.9) 100%);
+    border: 1px solid rgba(226, 232, 240, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .form-container {
+        margin: 1rem;
+        padding: 1.5rem;
+        max-width: none;
+    }
+}
+
 
 /* Boutons de sélection de type d'utilisateur (Existant/Nouveau) */
 .user-type {

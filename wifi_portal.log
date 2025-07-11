@@ -463,3 +463,55 @@
 2025-07-10 22:30:00,351 - INFO - 127.0.0.1 - - [10/Jul/2025 22:30:00] "GET /static/css/style.css HTTP/1.1" 200 -
 2025-07-10 22:34:17,642 - INFO -  * Detected change in '/home/lidruf/wifi_portal_backend/app.py', reloading
 2025-07-10 22:34:17,741 - INFO -  * Restarting with stat
+2025-07-11 08:47:30,239 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.206.47:5000
+2025-07-11 08:47:30,267 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 08:47:37,312 - INFO - 127.0.0.1 - - [11/Jul/2025 08:47:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-11 08:47:38,106 - INFO - 127.0.0.1 - - [11/Jul/2025 08:47:38] "GET / HTTP/1.1" 200 -
+2025-07-11 08:47:38,158 - INFO - 127.0.0.1 - - [11/Jul/2025 08:47:38] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 08:47:38,618 - INFO - 127.0.0.1 - - [11/Jul/2025 08:47:38] "[33mGET /static/PlusJakartaSans-VariableFont_wght.ttf HTTP/1.1[0m" 404 -
+2025-07-11 08:48:27,748 - INFO - 127.0.0.1 - - [11/Jul/2025 08:48:27] "GET / HTTP/1.1" 200 -
+2025-07-11 08:48:27,811 - INFO - 127.0.0.1 - - [11/Jul/2025 08:48:27] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 08:52:21,120 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.206.47:5000
+2025-07-11 08:52:21,121 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 08:52:26,041 - INFO - 127.0.0.1 - - [11/Jul/2025 08:52:26] "GET / HTTP/1.1" 200 -
+2025-07-11 08:52:26,139 - INFO - 127.0.0.1 - - [11/Jul/2025 08:52:26] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 08:52:26,508 - INFO - 127.0.0.1 - - [11/Jul/2025 08:52:26] "[33mGET /static/PlusJakartaSans-VariableFont_wght.ttf HTTP/1.1[0m" 404 -
+2025-07-11 08:53:00,395 - INFO - 127.0.0.1 - - [11/Jul/2025 08:53:00] "GET / HTTP/1.1" 200 -
+2025-07-11 08:53:00,435 - INFO - 127.0.0.1 - - [11/Jul/2025 08:53:00] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 08:57:28,325 - INFO - 127.0.0.1 - - [11/Jul/2025 08:57:28] "GET / HTTP/1.1" 200 -
+2025-07-11 08:57:28,401 - INFO - 127.0.0.1 - - [11/Jul/2025 08:57:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:03:12,790 - INFO - 127.0.0.1 - - [11/Jul/2025 09:03:12] "GET / HTTP/1.1" 200 -
+2025-07-11 09:03:12,876 - INFO - 127.0.0.1 - - [11/Jul/2025 09:03:12] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:03:37,802 - INFO - 127.0.0.1 - - [11/Jul/2025 09:03:37] "GET / HTTP/1.1" 200 -
+2025-07-11 09:03:37,878 - INFO - 127.0.0.1 - - [11/Jul/2025 09:03:37] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:04:59,441 - INFO - 127.0.0.1 - - [11/Jul/2025 09:04:59] "GET / HTTP/1.1" 200 -
+2025-07-11 09:04:59,516 - INFO - 127.0.0.1 - - [11/Jul/2025 09:04:59] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:09:02,185 - INFO - 127.0.0.1 - - [11/Jul/2025 09:09:02] "GET / HTTP/1.1" 200 -
+2025-07-11 09:09:02,231 - INFO - 127.0.0.1 - - [11/Jul/2025 09:09:02] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:13:58,130 - INFO - 127.0.0.1 - - [11/Jul/2025 09:13:58] "GET / HTTP/1.1" 200 -
+2025-07-11 09:13:58,190 - INFO - 127.0.0.1 - - [11/Jul/2025 09:13:58] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:14:52,494 - INFO - 127.0.0.1 - - [11/Jul/2025 09:14:52] "GET / HTTP/1.1" 200 -
+2025-07-11 09:14:52,537 - INFO - 127.0.0.1 - - [11/Jul/2025 09:14:52] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:17:53,765 - INFO - 127.0.0.1 - - [11/Jul/2025 09:17:53] "GET / HTTP/1.1" 200 -
+2025-07-11 09:17:53,815 - INFO - 127.0.0.1 - - [11/Jul/2025 09:17:53] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:18:21,988 - INFO - 127.0.0.1 - - [11/Jul/2025 09:18:21] "GET / HTTP/1.1" 200 -
+2025-07-11 09:18:22,030 - INFO - 127.0.0.1 - - [11/Jul/2025 09:18:22] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:19:18,608 - INFO - 127.0.0.1 - - [11/Jul/2025 09:19:18] "GET / HTTP/1.1" 200 -
+2025-07-11 09:19:18,669 - INFO - 127.0.0.1 - - [11/Jul/2025 09:19:18] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:21:39,280 - INFO - 127.0.0.1 - - [11/Jul/2025 09:21:39] "GET / HTTP/1.1" 200 -
+2025-07-11 09:21:39,328 - INFO - 127.0.0.1 - - [11/Jul/2025 09:21:39] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:26:09,992 - INFO - 127.0.0.1 - - [11/Jul/2025 09:26:09] "GET / HTTP/1.1" 200 -
+2025-07-11 09:26:10,038 - INFO - 127.0.0.1 - - [11/Jul/2025 09:26:10] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:26:32,973 - INFO - 127.0.0.1 - - [11/Jul/2025 09:26:32] "GET / HTTP/1.1" 200 -
+2025-07-11 09:26:33,016 - INFO - 127.0.0.1 - - [11/Jul/2025 09:26:33] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-11 09:27:09,760 - INFO - 127.0.0.1 - - [11/Jul/2025 09:27:09] "POST /api/payment/initiate HTTP/1.1" 200 -
+2025-07-11 09:27:09,817 - INFO - 127.0.0.1 - - [11/Jul/2025 09:27:09] "GET /payment?offer=basic HTTP/1.1" 200 -
+2025-07-11 09:27:10,814 - INFO - 127.0.0.1 - - [11/Jul/2025 09:27:10] "POST /api/payment/initiate HTTP/1.1" 200 -
+2025-07-11 09:29:10,792 - INFO - 127.0.0.1 - - [11/Jul/2025 09:29:10] "GET / HTTP/1.1" 200 -
+2025-07-11 09:29:10,876 - INFO - 127.0.0.1 - - [11/Jul/2025 09:29:10] "GET /static/css/style.css HTTP/1.1" 200 -
