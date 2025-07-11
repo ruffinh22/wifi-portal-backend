@@ -17,9 +17,6 @@ requests==2.31.0
 
 
 
-# Utilitaires
-
-
 
 # Serveur WSGI pour la production
 gunicorn==21.2.0
