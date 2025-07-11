@@ -16,8 +16,6 @@ Flask-Limiter==3.5.0
 requests==2.31.0
 
 
-
-
 # Serveur WSGI pour la production
 gunicorn==21.2.0
 
