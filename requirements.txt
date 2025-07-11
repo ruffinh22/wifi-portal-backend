@@ -1,8 +1,31 @@
+
+
+# Requirements.txt pour Portail WiFi Flask
+# Versions fixées pour la reproductibilité et la sécurité
+
+# Framework principal
 Flask==2.3.3
-
 Flask-CORS==4.0.0
+Flask-Limiter==3.5.0
+
+# Base de données
+
+
+
+# Requêtes HTTP
 requests==2.31.0
 
-Flask-Limiter==3.5.0
-requests==2.31.0
+
+
+# Utilitaires
+
+
+
+# Serveur WSGI pour la production
 gunicorn==21.2.0
+
+# Surveillance et métriques (optionnel)
+prometheus-client==0.17.1
+
+# Variables d'environnement
+python-dotenv==1.0.0

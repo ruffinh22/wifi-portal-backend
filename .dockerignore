@@ -1,0 +1,93 @@
+# .dockerignore pour Portail WiFi
+# Exclure les fichiers inutiles pour réduire la taille de l'image
+
+# Fichiers Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environnements virtuels
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+README.md
+*.md
+docs/
+
+# Logs et bases de données locales (seront recréés dans le container)
+*.log
+wifi_portal.db
+logs/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+
+# Fichiers de configuration sensibles
+.env.local
+.env.production
+config.local.py
+
+# Tests
+test/
+tests/
+*test.py
+*_test.py
+
+# Certificats SSL (à monter via volumes si nécessaire)
+*.pem
+*.key
+*.crt
+ssl/

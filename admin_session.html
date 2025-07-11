@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessions Actives - Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .session-card {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+        }
+        .status-online {
+            color: #28a745;
+        }
+        .bytes-info {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        .disconnect-btn {
+            background-color: #dc3545;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .disconnect-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="mb-4">Sessions Actives MikroTik</h2>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Sessions en cours ({{ sessions|length }})</h5>
+                    </div>
+                    <div class="card-body">
+                        {% if sessions %}
+                            {% for session in sessions %}
+                            <div class="session-card">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <strong>Utilisateur:</strong> {{ session.username }}<br>
+                                        <strong>IP:</strong> {{ session.ip }}<br>
+                                        <strong>MAC:</strong> {{ session.mac }}
+                                    </div>
+                                    <div class="col-md-3">
+                                        {% if session.email %}
+                                        <strong>Email:</strong> {{ session.email }}<br>
+                                        {% endif %}
+                                        {% if session.phone %}
+                                        <strong>Téléphone:</strong> {{ session.phone }}<br>
+                                        {% endif %}
+                                        {% if session.subscription_type %}
+                                        <strong>Type:</strong> {{ session.subscription_type }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-md-3">
+                                        <strong>Durée:</strong> {{ session.uptime }}<br>
+                                        <div class="bytes-info">
+                                            <strong>Téléchargé:</strong> {{ (session.bytes_in|int / 1024 / 1024)|round(2) }} MB<br>
+                                            <strong>Envoyé:</strong> {{ (session.bytes_out|int / 1024 / 1024)|round(2) }} MB
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button class="disconnect-btn" onclick="disconnectUser('{{ session.username }}')">
+                                            Déconnecter
+                                        </button>
+                                        {% if session.subscription_expires %}
+                                        <div class="mt-2">
+                                            <small>Expire: {{ session.subscription_expires }}</small>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="alert alert-info">
+                                Aucune session active pour le moment.
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function disconnectUser(username) {
+            if (confirm(`Êtes-vous sûr de vouloir déconnecter l'utilisateur ${username} ?`)) {
+                fetch(`/api/disconnect/${username}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Utilisateur déconnecté avec succès');
+                        location.reload();
+                    } else {
+                        alert('Erreur lors de la déconnexion: ' + data.error);
+                    }
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                    alert('Erreur lors de la déconnexion');
+                });
+            }
+        }
+
+        // Actualiser automatiquement la page toutes les 30 secondes
+        setInterval(() => {
+            location.reload();
+        }, 30000);
+    </script>
+</body>
+</html>
